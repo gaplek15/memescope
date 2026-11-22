@@ -1,0 +1,28 @@
+# MemeScope .gitignore
+# IMPORTANT: .kiro/ must NEVER be ignored — Kiroween requires it in the repo.
+# Do not add .kiro/ or any sub-folder here.
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Environment / secrets — NEVER commit these
+.env
+.env.*
+*.pem
+*.key
+*secret*
+credentials.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs / temp
+*.log
+/tmp/
