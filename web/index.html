@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemeScope — Meme Token Screener</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🔬</span>
+        <span class="logo-text">MemeScope</span>
+      </div>
+      <p class="tagline">Rug detector for BNB Chain meme tokens</p>
+    </div>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- Input panel -->
+    <section class="input-section card" aria-label="Token screening form">
+      <h2 class="section-title">Screen a Token</h2>
+
+      <form id="screen-form" novalidate>
+        <div class="field-group">
+          <label for="address-input" class="field-label">Contract Address</label>
+          <input
+            id="address-input"
+            type="text"
+            class="text-input"
+            placeholder="0x contract address"
+            autocomplete="off"
+            spellcheck="false"
+            aria-describedby="address-error"
+          >
+          <span id="address-error" class="field-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="chain-select" class="field-label">Chain</label>
+          <select id="chain-select" class="select-input">
+            <option value="56" selected>BNB Chain (BSC)</option>
+            <option value="1">Ethereum</option>
+            <option value="137">Polygon</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button id="submit-btn" type="submit" class="btn btn-primary">Screen Token</button>
+          <button id="example-btn" type="button" class="btn btn-secondary">Try an example</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Progress indicator (hidden while idle) -->
+    <section id="progress-section" class="progress-section card" aria-label="Screening progress" hidden>
+      <h2 class="section-title">Screening…</h2>
+      <ol id="progress-steps" class="progress-steps" aria-label="Progress steps">
+        <li class="step" data-step="cmc">CMC</li>
+        <li class="step" data-step="dex">DexScreener</li>
+        <li class="step" data-step="goplus">GoPlus</li>
+        <li class="step" data-step="onchain">On-chain</li>
+        <li class="step" data-step="quote">Quote</li>
+        <li class="step" data-step="narrative">Narrative</li>
+        <li class="step" data-step="done">Done</li>
+      </ol>
+      <p id="progress-label" class="progress-label" aria-live="polite"></p>
+    </section>
+
+    <!-- Error banner (hidden by default) -->
+    <div id="error-banner" class="error-banner" role="alert" aria-live="assertive" hidden></div>
+
+    <!-- Report section (hidden until a report is ready) -->
+    <section id="report-section" class="report-section" aria-label="Screening report" hidden>
+
+      <!-- Verdict card -->
+      <div id="verdict-card" class="verdict-card card">
+        <div class="verdict-left">
+          <span id="verdict-badge" class="verdict-badge"></span>
+          <div class="verdict-meta">
+            <span id="report-name" class="report-name"></span>
+            <span id="report-address" class="report-address"></span>
+          </div>
+        </div>
+        <div class="verdict-right">
+          <div class="score-ring">
+            <span id="score-value" class="score-value"></span>
+            <span class="score-label">/ 100</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Market snapshot -->
+      <div id="market-card" class="market-card card">
+        <h3 class="card-title">Market Snapshot</h3>
+        <div id="cmc-note" class="cmc-note" hidden>
+          <span class="warn-icon">⚠</span> Not listed on CoinMarketCap — price and volume are from DexScreener
+        </div>
+        <dl id="market-grid" class="market-grid">
+          <div class="market-item">
+            <dt>Price</dt>
+            <dd id="stat-price">—</dd>
+          </div>
+          <div class="market-item">
+            <dt>Liquidity</dt>
+            <dd id="stat-liquidity">—</dd>
+          </div>
+          <div class="market-item">
+            <dt>24h Volume</dt>
+            <dd id="stat-volume">—</dd>
+          </div>
+          <div class="market-item">
+            <dt>Market Cap</dt>
+            <dd id="stat-mcap">—</dd>
+          </div>
+          <div class="market-item">
+            <dt>DEX</dt>
+            <dd id="stat-dex">—</dd>
+          </div>
+          <div class="market-item">
+            <dt>Pair</dt>
+            <dd id="stat-pair">—</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- 8-gate table -->
+      <div class="gates-card card">
+        <h3 class="card-title">Gate Results</h3>
+        <div class="table-scroll">
+          <table id="gates-table" class="gates-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Gate</th>
+                <th scope="col">Result</th>
+                <th scope="col">Detail</th>
+              </tr>
+            </thead>
+            <tbody id="gates-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Narrative -->
+      <div class="narrative-card card">
+        <h3 class="card-title">Risk Narrative</h3>
+        <p id="narrative-text" class="narrative-text"></p>
+        <p class="screened-at">
+          Screened at: <span id="screened-at-value"></span>
+        </p>
+      </div>
+
+      <!-- Evidence links -->
+      <div class="evidence-card card">
+        <h3 class="card-title">Evidence &amp; Sources</h3>
+        <div id="evidence-links" class="evidence-links"></div>
+      </div>
+
+    </section>
+
+    <!-- Leaderboard section (always visible) -->
+    <section id="leaderboard-section" class="leaderboard-section card" aria-label="LOLOS leaderboard">
+      <h2 class="section-title">LOLOS Leaderboard</h2>
+      <p class="leaderboard-subtitle">Tokens that passed all gates, ranked by score. Stored locally in your browser.</p>
+      <div id="leaderboard-empty" class="leaderboard-empty">
+        No tokens on the leaderboard yet. Screen a token to get started.
+      </div>
+      <div class="table-scroll" id="leaderboard-table-wrap" hidden>
+        <table id="leaderboard-table" class="leaderboard-table">
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Token</th>
+              <th scope="col">Score</th>
+              <th scope="col">Liquidity</th>
+              <th scope="col">Screened At</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Disclaimer: always visible -->
+  <footer class="site-footer">
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong>
+      LOLOS is not a guarantee of safety. MemeScope identifies mechanical traps — not deployer intent.
+      Any money put in should be treated as money you are prepared to lose.
+      This is not financial advice.
+    </div>
+  </footer>
+
+</body>
+</html>
