@@ -1,0 +1,274 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "9. [K] Install the pre-commit hook (`cp .kiro/hooks/pre-commit-secret-scan.sh": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328606986
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328609948
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328646978
+      }
+    ],
+    "10. [K] Port the 8-gate engine from `~/workspace/meme_watch/screen_strict.py`": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328606992
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328650355
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328758646
+      }
+    ],
+    "11. [K] Implement `src/sources/dexscreener.py` (pairs lookup + pair fallback).": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328606995
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328761634
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329163627
+      }
+    ],
+    "12. [K] Implement `src/sources/goplus.py` (token security + address security).": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328606997
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328764015
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329165784
+      }
+    ],
+    "13. [K] Implement `src/sources/onchain.py` (eth_call balanceOf/totalSupply,": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328606998
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328766333
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329168067
+      }
+    ],
+    "14. [K] Implement `src/sources/cmc.py` (quotes/latest, key from": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607000
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328768808
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329170434
+      }
+    ],
+    "15. [K] Implement `src/sources/quote.py` (reverse sell-quote for $1 of token).": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607001
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328771239
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329172779
+      }
+    ],
+    "16. [K] Implement `src/narrative.py` (template tier first, LLM tier behind": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607002
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329175142
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329261389
+      }
+    ],
+    "17. [K] Implement `src/server.py` (stdlib `http.server`, `POST /api/screen`,": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607006
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329177380
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329565342
+      }
+    ],
+    "18. [K] Write `src/test_gates.py` (PASS/FAIL/UNKNOWN per gate, no network)": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607008
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329571476
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329638778
+      }
+    ],
+    "19. [K] Live smoke test: screen one real example token end-to-end and": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607010
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329641284
+      },
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795329722031
+      }
+    ],
+    "20. [K] Build `web/index.html` (input form, chain selector, progress": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607011
+      },
+      {
+        "executionId": "6005004e-cd45-413a-9a05-fe2692598842",
+        "chatSessionId": "sess_2b60fa2e-05a3-4e8d-8aa6-47fb67964db0",
+        "timestamp": 1795329926303
+      }
+    ],
+    "21. [K] Build `web/app.js` (keyless APIs direct from browser; keyed steps": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607012
+      }
+    ],
+    "22. [K] Build `web/style.css` (dark theme, mobile-first, stacked layout": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607014
+      }
+    ],
+    "23. [K] Wire evidence links (DexScreener pair, GoPlus token, BscScan": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607016
+      }
+    ],
+    "24. [K] Verify the \"not listed on CMC\" fallback renders correctly.": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607017
+      }
+    ],
+    "25. [K] Write `docs/api-notes.md` (per-source endpoint notes + gotchas:": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607026
+      }
+    ],
+    "26. [K] Record demo video (< 3 min, YouTube public): input → screening →": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607035
+      }
+    ],
+    "27. [K] Write the \"How Kiro was used\" write-up (specs, hooks, steering,": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607044
+      }
+    ],
+    "28. [K] Final repo check: public GitHub repo, MIT LICENSE visible in": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607052
+      }
+    ],
+    "29. [K] Create the GitHub repo (`gaplek15/memescope`), push, verify the": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607061
+      }
+    ],
+    "30. [K] Submit on Devpost (category: Frankenstein, repo URL, live demo": [
+      {
+        "executionId": "5a8a9956-a4fd-487b-8a57-134443e6f8f9",
+        "chatSessionId": "sess_afc8b898-cd12-4f42-a4e3-228d65558a5b",
+        "timestamp": 1795328607068
+      }
+    ]
+  }
+}
