@@ -55,6 +55,20 @@ Optional environment variables:
 | `LLM_ENDPOINT` | Optional LLM endpoint for the narrative tier. Without it, a template narrative is used. |
 | `PORT` | Backend port (default 8000). |
 
+## Demo
+
+Watch a real screening (43 s, no audio): [`docs/demo.mp4`](docs/demo.mp4) —
+paste the example token (CAKE), live screening, verdict **GAGAL 35/100**
+with all 8 gates, the AI narrative, evidence links, and the leaderboard
+empty state. Three other live tokens (ANT, Mubarak, TST) were also screened
+while preparing the demo; all correctly failed, so the leaderboard stays
+empty until a token genuinely passes — no entries were faked.
+
+A still of the CAKE report: [`docs/screenshot-report-cake.png`](docs/screenshot-report-cake.png).
+
+How the project was built with Kiro (specs, steering, hooks, and the two
+bugs a human had to fix): [`docs/how-kiro-was-used.md`](docs/how-kiro-was-used.md).
+
 ## Project layout
 
 ```
