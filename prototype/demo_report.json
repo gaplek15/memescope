@@ -1,0 +1,50 @@
+{
+  "token": "0x1111111111111111111111111111111111111111",
+  "name": "ExampleMeme",
+  "symbol": "EXM",
+  "score": 80,
+  "verdict": "GAGAL",
+  "gates": [
+    {
+      "name": "1. Market",
+      "result": "PASS",
+      "detail": "liq $85,400 | vol24 $31,200 | buy 42 vs sell 18 | age 361h"
+    },
+    {
+      "name": "2. GoPlus security",
+      "result": "PASS",
+      "detail": "all clean"
+    },
+    {
+      "name": "3. Owner renounced",
+      "result": "PASS",
+      "detail": "owner=0x0000000000000000000000000000000000000000"
+    },
+    {
+      "name": "4. LP lock/burn",
+      "result": "FAIL",
+      "detail": "locked 97% | burned 0% | lock ends in 190 days  [demo: forced fail]"
+    },
+    {
+      "name": "5. Holder concentration",
+      "result": "PASS",
+      "detail": "top1 2.10% | top5 7.60% | holders 1842"
+    },
+    {
+      "name": "6. Reputation",
+      "result": "PASS",
+      "detail": "creator 0x333333333333... malicious=0 flags=[] (canned)"
+    },
+    {
+      "name": "7. Sell path",
+      "result": "PASS",
+      "detail": "sell $1 -> $0.94"
+    },
+    {
+      "name": "8. Survival",
+      "result": "PASS",
+      "detail": "6h change -12.5%"
+    }
+  ],
+  "narrative": "Risiko terbesar: 4. LP lock/burn gagal. Token ini tidak lolos screening ketat \u2014 perlakukan sebagai lotre, bukan pick hasil screening."
+}
