@@ -62,16 +62,26 @@
       GoPlus fraction 0–1, None fields, DexScreener pairs:null fallback).
       <!-- Verified against final implementation 2026-11-22; added BNB-price
       gotcha (priceUsd = base-token price) + PancakeSwap getAmountsOut method. -->
-- [~] 26. [K] Record demo video (< 3 min, YouTube public): input → screening →
+- [x] 26. [K] Record demo video (< 3 min, YouTube public): input → screening →
       report → leaderboard.
+      <!-- Done 2026-11-22: docs/demo.mp4, 43.5s, 1280x720 h264. Real CAKE
+      screening (GAGAL 35/100, 8 gates, 3 evidence links) + honest empty-state
+      leaderboard — 3 LOLOS candidates tried live (ANT, Mubarak, TST), all
+      correctly GAGAL; no leaderboard entries faked. YouTube upload pending
+      (needs user's account). -->
 - [x] 27. [K] Write the "How Kiro was used" write-up (specs, hooks, steering,
       MCP if used, what changed vs vibe coding).
       <!-- Written: docs/how-kiro-was-used.md — honest about 2 human bug fixes,
       6× 429 throttle, no MCP / no Crew used. -->
-- [~] 28. [K] Final repo check: public GitHub repo, MIT LICENSE visible in
+- [x] 28. [K] Final repo check: public GitHub repo, MIT LICENSE visible in
       About, `.kiro/` present at root and NOT in `.gitignore`, no secrets
       anywhere (`git log` + hook scan clean).
-- [~] 29. [K] Create the GitHub repo (`gaplek15/memescope`), push, verify the
+      <!-- Done 2026-11-22: repo public, MIT detected by GitHub, .kiro/ in
+      tree, hook scan 0 hits + pre-commit hook passes, 3 doc dummy values
+      removed before push. -->
+- [x] 29. [K] Create the GitHub repo (`gaplek15/memescope`), push, verify the
       `.kiro/` directory renders on github.com.
+      <!-- Done 2026-11-22: repo id 1467295993, 34 files pushed via Contents
+      API (incl. docs/demo.mp4), About + 10 topics set, tree verified via API. -->
 - [~] 30. [K] Submit on Devpost (category: Frankenstein, repo URL, live demo
       URL, video URL, description, Kiro write-up) before 4 Dec 2026 14:00 PT.
