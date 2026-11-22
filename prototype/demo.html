@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MemeScope — Demo Report (prototype)</title>
+<style>
+  :root { --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#e6edf3;
+          --muted:#8b949e; --green:#3fb950; --red:#f85149; --yellow:#d29922;
+          --accent:#58a6ff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,sans-serif; padding:16px; }
+  .wrap { max-width:720px; margin:0 auto; }
+  header { text-align:center; margin-bottom:20px; }
+  header h1 { font-size:28px; } header h1 span { color:var(--accent); }
+  header p { color:var(--muted); margin-top:4px; font-size:14px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:14px; }
+  .card h2 { font-size:16px; margin-bottom:10px; }
+  .verdict { display:flex; justify-content:space-between; align-items:center; }
+  .badge { font-size:22px; font-weight:800; padding:6px 14px; border-radius:8px; }
+  .badge.pass { background:rgba(63,185,80,.15); color:var(--green); border:1px solid var(--green); }
+  .score { font-size:15px; color:var(--muted); } .score b { color:var(--text); font-size:22px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td { padding:8px 4px; border-bottom:1px solid var(--border); vertical-align:top; }
+  td:last-child { text-align:right; font-weight:700; white-space:nowrap; }
+  .pass { color:var(--green); } .fail { color:var(--red); } .warn { color:var(--yellow); }
+  .detail { color:var(--muted); font-weight:400; font-size:13px; display:block; }
+  .narrative { line-height:1.6; font-size:15px; }
+  .disclaimer { font-size:13px; color:var(--yellow); line-height:1.5; }
+  .sources { font-size:13px; color:var(--muted); line-height:1.8; }
+  .sources a { color:var(--accent); text-decoration:none; }
+  .leaderboard td:last-child { text-align:right; }
+  .proto-note { font-size:12px; color:var(--muted); text-align:center; margin-top:18px; }
+  .progress { display:flex; gap:6px; margin-bottom:14px; }
+  .step { flex:1; text-align:center; font-size:11px; color:var(--muted); padding:6px 2px; border:1px solid var(--border); border-radius:6px; }
+  .step.done { color:var(--green); border-color:var(--green); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Meme<span>Scope</span></h1>
+    <p>Four sources. Eight gates. One honest verdict. — Prototype demo (canned data)</p>
+  </header>
+
+  <div class="progress">
+    <div class="step done">✓ CMC</div>
+    <div class="step done">✓ DexScreener</div>
+    <div class="step done">✓ GoPlus</div>
+    <div class="step done">✓ On-chain</div>
+    <div class="step done">✓ Quote</div>
+    <div class="step done">✓ Narrative</div>
+  </div>
+
+  <div class="card verdict">
+    <div>
+      <h2 style="margin:0">ExampleMeme (EXM)</h2>
+      <p style="color:var(--muted);font-size:13px;margin-top:4px">0x1111…1111 · BSC · PancakeSwap</p>
+    </div>
+    <div style="text-align:right">
+      <div class="badge pass">LOLOS</div>
+      <div class="score" style="margin-top:6px"><b>100</b>/100</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Market snapshot</h2>
+    <table>
+      <tr><td>Price</td><td>$0.00001234</td></tr>
+      <tr><td>Market cap (CMC)</td><td>$1,234,000</td></tr>
+      <tr><td>Liquidity</td><td>$85,400</td></tr>
+      <tr><td>Volume 24h</td><td>$31,200</td></tr>
+      <tr><td>Buys / sells (1h)</td><td>42 / 18</td></tr>
+      <tr><td>Pair age</td><td>~14 days</td></tr>
+      <tr><td>Change 6h</td><td>−12.5%</td></tr>
+      <tr><td>Holders</td><td>1,842</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>8 strict gates</h2>
+    <table>
+      <tr><td>1. Market <span class="detail">liq $85,400 · vol24 $31,200 · buy 42 vs sell 18 · age ~14d</span></td><td class="pass">PASS</td></tr>
+      <tr><td>2. GoPlus security <span class="detail">no honeypot · can buy/sell · tax 0% · not mintable · no proxy</span></td><td class="pass">PASS</td></tr>
+      <tr><td>3. Owner renounced <span class="detail">owner = 0x0000…0000</span></td><td class="pass">PASS</td></tr>
+      <tr><td>4. LP lock / burn <span class="detail">locked 97% · burned 0% · lock ends in 190 days</span></td><td class="pass">PASS</td></tr>
+      <tr><td>5. Holder concentration <span class="detail">top1 2.10% · top5 7.60% · holders 1,842</span></td><td class="pass">PASS</td></tr>
+      <tr><td>6. Reputation <span class="detail">creator: 0 malicious contracts, no flags</span></td><td class="pass">PASS</td></tr>
+      <tr><td>7. Sell path <span class="detail">sell $1 → $0.94</span></td><td class="pass">PASS</td></tr>
+      <tr><td>8. Survival <span class="detail">6h change −12.5%</span></td><td class="pass">PASS</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>AI risk narrative</h2>
+    <p class="narrative">All 8 gates passed and no mechanical trap was detected. Remember: a clean contract cannot predict the deployer's future decisions. Treat any money put in as money you are prepared to lose.</p>
+  </div>
+
+  <div class="card">
+    <h2>Leaderboard — passed tokens</h2>
+    <table class="leaderboard">
+      <tr><td>1. ExampleMeme (EXM)</td><td>100/100 · liq $85,400</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Verify the evidence yourself</h2>
+    <p class="sources">
+      <a href="https://dexscreener.com/bsc/0x2222222222222222222222222222222222222222">DexScreener pair ↗</a><br>
+      <a href="https://gopluslabs.io/token-security/56/0x1111111111111111111111111111111111111111">GoPlus token security ↗</a><br>
+      <a href="https://bscscan.com/token/0x1111111111111111111111111111111111111111">BscScan contract ↗</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <p class="disclaimer">⚠️ LOLOS is not a guarantee of safety and never a recommendation to buy. A rug is the deployer's decision — no screener can predict it.</p>
+  </div>
+
+  <p class="proto-note">MemeScope prototype — concept validation only. Data on this page is canned demo data, not a live screening. Run <code>python3 prototype/demo_screen.py</code> for the CLI demo.</p>
+</div>
+</body>
+</html>
